@@ -63,7 +63,7 @@ def savebackup(path, output, exclude, token):
             if not os.path.exists(configpath + "Script Data/"):
                 os.makedirs(configpath + "Script Data/")
             decoded = base64.b64decode(
-                script_data['scriptContent']).decode('utf-8')
+                script_data['scriptContent']).decode('utf-8-sig')
             f = open(configpath + "Script Data/" + script_data['fileName'], 'w')
             f.write(decoded)
 

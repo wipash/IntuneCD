@@ -68,7 +68,7 @@ def savebackup(path, output, exclude, token):
                 # Save detection script to the Script Data folder
                 config_count += 1
                 decoded = base64.b64decode(
-                    pr_details['detectionScriptContent']).decode('utf-8')
+                    pr_details['detectionScriptContent']).decode('utf-8-sig')
                 f = open(
                     f"{configpath}/Script Data/{pr_details['displayName']}_DetectionScript.ps1",
                     'w')
@@ -76,7 +76,7 @@ def savebackup(path, output, exclude, token):
                 # Save remediation script to the Script Data folder
                 config_count += 1
                 decoded = base64.b64decode(
-                    pr_details['remediationScriptContent']).decode('utf-8')
+                    pr_details['remediationScriptContent']).decode('utf-8-sig')
                 f = open(
                     f"{configpath}/Script Data/{pr_details['displayName']}_RemediationScript.ps1",
                     'w')
