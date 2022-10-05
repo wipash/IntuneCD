@@ -210,7 +210,7 @@ def document_configs(configpath, outpath, header, max_length, split):
                 config_table = write_table(config_table_list)
 
                 # Write data to file
-                with open(outpath, 'a') as md:
+                with open(outpath, 'a', encoding='utf-8') as md:
                     if "displayName" in repo_data:
                         md.write('## ' + repo_data['displayName'] + '\n')
                     if "name" in repo_data:

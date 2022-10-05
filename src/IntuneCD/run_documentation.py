@@ -171,7 +171,7 @@ def start():
             index_md = f'{configpath}/index.md'
             md_file(index_md)
 
-            with open(index_md, 'w') as doc:
+            with open(index_md, 'w', encoding='utf-8') as doc:
                 l1 = f'# {title} \n\n'
                 l2 = f'{intro} \n\n'
                 l3 = f'{tenant} \n\n'
@@ -183,7 +183,7 @@ def start():
 
         else:
             document = markdown_toclify(input_file=outpath, back_to_top=True, exclude_h=[3])
-            with open(outpath, 'w') as doc:
+            with open(outpath, 'w', encoding='utf-8') as doc:
                 l1 = f'# {title} \n\n'
                 l2 = f'{intro} \n\n'
                 l3 = f'{tenant} \n\n'
