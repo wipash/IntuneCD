@@ -195,17 +195,17 @@ def clean_list(data, decode):
                                 if decode:
                                     if is_base64(v2):
                                         v2 = decode_base64(v2)
-                                string += f"**{k2}:** {v2}</br>"
+                                string += f"**{k2}:** {v2}<br/>"
                             else:
                                 if decode:
                                     if is_base64(v2):
                                         v2 = decode_base64(v2)
-                                string += f"**{k2}:** {v2}</br>"
+                                string += f"**{k2}:** {v2}<br/>"
                     else:
                         if decode:
                             if is_base64(v):
                                 v = decode_base64(v)
-                        string += f"**{k}:** {v}</br>"
+                        string += f"**{k}:** {v}<br/>"
                 string += "</ul>"
             else:
                 if decode:
@@ -238,12 +238,12 @@ def clean_list(data, decode):
                         if decode:
                             if is_base64(v):
                                 v = decode_base64(v)
-                        string += f"**{k}:** {v}</br>"
+                        string += f"**{k}:** {v}<br/>"
             else:
                 if decode:
                     if is_base64(val):
                         val = decode_base64(val)
-                string += f"**{key}:** {val}</br>"
+                string += f"**{key}:** {val}<br/>"
 
         return string
 
