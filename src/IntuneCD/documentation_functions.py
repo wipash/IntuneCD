@@ -267,9 +267,9 @@ def clean_list(data, decode):
             if is_base64(s):
                 s = decode_base64(s)
         if len(s) > 200:
-            string = f"<details><summary>Click to expand...</summary>{item}</details>"
+            string = f"<details><summary>Click to expand...</summary>{s}</details>"
         else:
-            string = item
+            string = s
 
         return string
 
